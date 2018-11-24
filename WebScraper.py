@@ -16,7 +16,7 @@ browser = webdriver.Chrome(executable_path='/Users/matthewbrink/Documents/MattWe
 
 browser.get('https://finance.yahoo.com/quote/FB?p=FB')
 
-timeout = 50
+timeout = 100
 
 try:
         WebDriverWait(browser, timeout).until(EC.visibility_of_element_located((By.XPATH, "//a[@class='Va(m) C($finDarkLink) Wow(bw) Us(n)']"))) #This is specific to the website. It's just an element on the page that he presumed would load last, so if it's loaded the rest of the page has probably loaded (not the most professional way of doing it)
